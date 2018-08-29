@@ -1,0 +1,22 @@
+set style fill pattern 1 border
+set xlabel "{/*2.5 width of range query (km)}" offset 0,-1
+set ylabel "{/*2.0 cost (scanned items)}" offset -2.5,0
+set ylabel rotate by 90
+set logscale y 10
+set logscale x 10
+set tics font "Helvetica,20"
+set lmargin at screen 0.1
+set bmargin at screen 0.1
+
+
+file = "C:\\Users\\Cloud\\Desktop\\LearnIndex\\plot\\SizeAndResults\\size_results\\size"
+
+set lmargin 16.5
+set rmargin 4.0
+set tmargin 1.5
+set bmargin 4.5
+
+set key bottom right
+set key spacing 1
+
+plot file using 1:2 title "{/*1.0 average #results}" with linespoints ls 1, file using 1:5 title "{/*1.0 average opt-cost Hilbert(#Bits=14)}" with linespoints ls 4, file using 1:6 title "{/*1.0 average cost Naive}" with linespoints ls 5

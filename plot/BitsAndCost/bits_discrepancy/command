@@ -1,0 +1,23 @@
+set style fill pattern 1 border
+set xlabel "{/*2.5 Bits (for each dimension)}" offset 0,-1
+set ylabel "{/*2.5 discrepancy}" offset -3,0
+set ylabel rotate by 90
+set xrange [8:22]
+set tics font "Helvetica,20"
+set lmargin at screen 0.1
+set bmargin at screen 0.1
+
+
+file1 = "C:\\Users\\Cloud\\Desktop\\LearnIndex\\plot\\BitsAndCost\\bits_discrepancy\\bits_discrepancy_HKIsland"
+file2 = "C:\\Users\\Cloud\\Desktop\\LearnIndex\\plot\\BitsAndCost\\bits_discrepancy\\bits_discrepancy_HK"
+file3 = "C:\\Users\\Cloud\\Desktop\\LearnIndex\\plot\\BitsAndCost\\bits_discrepancy\\bits_discrepancy_Washington"
+
+set lmargin 14.5
+set rmargin 3.0
+set tmargin 1.5
+set bmargin 4.5
+
+set key center top
+set key spacing 2
+
+plot file1 title "{/*2.0 HKIsland}" with linespoints ls 2, file2 title "{/*2.0 HK}" with linespoints ls 3, file3 title "{/*2.0 Washington}" with linespoints ls 4

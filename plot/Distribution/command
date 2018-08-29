@@ -1,0 +1,7 @@
+set style fill pattern 1 border
+set xlabel "{/*2.0 longitude}" offset 0,-0.25
+set ylabel "{/*2.0 latitude}" offset 2,0
+
+file = "C:\\Users\\Cloud\\Desktop\\LearnIndex\\data\\PlottablePOIs.csv"
+set datafile separator ","
+plot file title "{/*1.0 tweet point}"
